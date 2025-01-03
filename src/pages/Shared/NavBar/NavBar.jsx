@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
-
+import { RiShoppingCartFill } from "react-icons/ri";
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
 
@@ -62,6 +62,12 @@ const NavBar = () => {
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
         <div className="navbar-end">
+          <Link to="/">
+            <button className="btn mr-2 ">
+              <RiShoppingCartFill className="mr-2 text-2xl" />
+              <div className="badge badge-secondary">+0</div>
+            </button>
+          </Link>
           {user ? (
             <>
               <p>{user?.displayName}</p>
