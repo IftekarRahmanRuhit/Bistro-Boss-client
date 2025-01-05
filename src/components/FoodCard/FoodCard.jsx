@@ -3,6 +3,7 @@ import useAuth from "../../hooks/useAuth";
 import Swal from 'sweetalert2'
 import axios from 'axios'
 import useAxiosSecure from "../../hooks/useAxiosSecure";
+import useCart from "../../hooks/useCart";
 
 
 const FoodCard = ({item}) => {
@@ -11,6 +12,7 @@ const FoodCard = ({item}) => {
     const location = useLocation();
     const {user} = useAuth();
     const axiosSecure = useAxiosSecure();
+    const [,refetch] = useCart()
     const handleAddToCart = (food) =>{
         if(user && user.email){
             // sent item to Database 
@@ -34,6 +36,8 @@ const FoodCard = ({item}) => {
                         timer: 1500
                       });
                 }
+                // refetch cart 
+                refetch()
             })
             
 

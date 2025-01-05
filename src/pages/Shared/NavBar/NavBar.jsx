@@ -64,7 +64,7 @@ const NavBar = () => {
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
         <div className="navbar-end">
-          <Link to="/">
+          <Link to="/dashboard/cart">
             <button className="btn mr-2 ">
               <RiShoppingCartFill className="mr-2 text-2xl" />
               <div className="badge badge-secondary">{cart.length}</div>
