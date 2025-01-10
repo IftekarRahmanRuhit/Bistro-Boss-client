@@ -12,10 +12,13 @@ import Secret from "../pages/Shared/Secret/Secret";
 import DashBoard from "../Layout/DashBoard";
 import Cart from "../pages/DashBoard/Cart/Cart";
 import AllUsers from "../pages/DashBoard/AllUsers/AllUsers";
+<<<<<<< HEAD
 import AddItems from "../pages/DashBoard/AddItems/AddItems";
 import AdminRoute from "./AdminRoute";
 import ManageItems from "../pages/DashBoard/ManageItems/ManageItems";
 import UpdateItem from "../pages/DashBoard/UpdateItem/UpdateItem";
+=======
+>>>>>>> 4b8ba28dfb22ffe689901f6275e67a12dde15da7
 
 
   export const router = createBrowserRouter([
@@ -58,6 +61,7 @@ import UpdateItem from "../pages/DashBoard/UpdateItem/UpdateItem";
           element: <Cart></Cart>
         },
 
+<<<<<<< HEAD
 
 
         // admin route 
@@ -78,6 +82,13 @@ import UpdateItem from "../pages/DashBoard/UpdateItem/UpdateItem";
           element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
         }
+=======
+        // admin route 
+        {
+          path:"users",
+          element: <AllUsers></AllUsers>
+        },
+>>>>>>> 4b8ba28dfb22ffe689901f6275e67a12dde15da7
       ]
     }
   ]);
