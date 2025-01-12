@@ -39,6 +39,7 @@ const DashBoard = () => {
                    <li> <NavLink to="/dashboard/cart"><TiShoppingCart />My Cart ({cart.length})</NavLink></li>
                    <li> <NavLink to="/dashboard/review"><PiCrownDuotone />Add Review</NavLink></li>
                    <li> <NavLink to="/dashboard/bookings"><TbBrandBooking />My Booking</NavLink></li>
+                   <li> <NavLink to="/dashboard/paymentHistory"><TbBrandBooking />Payment History</NavLink></li>
                 
                    </>
                     }
